@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/designblock.css"> 
+	<link rel="icon" type="image/svg+xml" href="https://spring.io/favicon.svg" />
+	<meta charset="UTF-8">
+	<title>Hospital</title>
+</head>	
+<body>
+	<h2>Actualizar datos paciente</h2>
+	<form action="/actualizaPaciente">
+		<input type="hidden" name="identificador" th:value="${paciente.id}">
+		<input type="text" name="nombre" placeholder="nombre" th:value="${paciente.nombre}">
+		<input type="text" name="apellidos" placeholder="apellidos" th:value="${paciente.apellidos}">
+		<input type="date" name="fecha_alta" th:value="${#dates.format(paciente.fecha_alta, 'yyyy-MM-dd')}">
+
+		<button>Actualizar</button>
+	</form>	
+<div class="linea"></div>
+<p><a href="../index.html">Menu Principal</a></p>	
+</body>
+<footer>
+  <div class="linea"></div>	
+  <p width="5em" height="5em">Development: Spring MVC
+	<a href="https://spring.io/" target="_blank">
+     <img src="https://spring.io/favicon.svg" height="20em" padding="0.5em" alt="Spring logo"/>
+  	</a>
+  </p>
+</footer>
+</html>	
